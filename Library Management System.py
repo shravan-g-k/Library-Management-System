@@ -6,6 +6,7 @@ a = 0
 while True:
     class Library :
         def intro(self):
+            """gives intodruction about the library services"""
             print("\n \n Good morning, welcome to My Library ")
             print('If you want to access the books available press "1"')
             print('If you want to lend a book press "2"')
@@ -14,10 +15,12 @@ while True:
             print('if you want to exit press "enter" in all circumstances ')
             a = int(input('please choose one from the above option - '))
         def books_available (self):
+            """gives information on books available"""
             global book_list
             book_list = ["Python","JavaScript","Java","Kotlin","PhP"]
             return ("These are the books that are available -->",book_list)
         def book_lend(self):
+            """manages who lend which book"""
             global book_list,book_lend
             print(f'these are the available book *case sensitive -->{book_list}')
             book_name = input('enter which book you want to lend - ')
@@ -30,6 +33,7 @@ while True:
             else :
                 self.intro()
         def book_return(self):
+            """manages who returned the book"""
             global no
             no += 1
             name = input('Please enter you name - ')
